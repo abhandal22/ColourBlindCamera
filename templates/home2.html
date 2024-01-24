@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>  
+        <title>Color Blind Camera</title> 
+        <meta name="viewport"content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="staticFiles\uploads\stylesheets\homeStyleCSS.css"> 
+    </head>  
+    <body> 
+        <h1 id="title">Color Blind Camera</h1>
+        
+        <form action = "/upload" method = "POST" enctype="multipart/form-data">  
+            <h3 class="options">Select a Image: <input type="file" name="image" accept=".png"/></h3>
+
+            <h3 class="options"> Select a Type:
+                <select id="type" name="type">
+                    <option value="deuteran">Deuteranomaly</option>
+                    <option value="protan">Protanomaly</option>
+                    <option value="tritan">Tritanomaly</option>
+                </select>
+            </h3>
+
+            <h3 class="options"> Select a Severity:
+                <select id="severity" name="severity">
+                    <option value="0">0.1</option>
+                    <option value="1">0.2</option>
+                    <option value="2">0.3</option>
+                    <option value="3">0.4</option>
+                    <option value="4">0.5</option>
+                    <option value="5">0.6</option>
+                    <option value="6">0.7</option>
+                    <option value="7">0.8</option>
+                    <option value="8">0.9</option>
+                    <option value="9">1.0</option>
+                </select>
+            </h3>
+
+            <h3 class="options"><input type = "submit" value="Upload"></h3>
+        </form>
+        
+        <p class="options"><b>Image Uploaded</b></p>
+        <p class="options"><b>Original (Left) vs Filter (Right)</b></p>
+
+        <div id="image-display">
+            <img src="{{ user_image }}">
+        </div>
+        <!-- <form action="/display">
+            <input type="submit" value="View">
+        </form> -->
+
+        
+        <h2 id="display-subtitle">Uploaded Images <br/> Original (Left) vs Filter (Right)</h2>
+
+        <div id="image-display">
+            {{ imageDisplay|safe }}
+        </div>
+
+    </body>  
+</html>

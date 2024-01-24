@@ -1,0 +1,57 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+body {
+  background-color: gray;
+  overflow-x: hidden;
+  margin: auto;
+}
+
+#title { 
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.options {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  background-color: whitesmoke;
+  height: 28px;
+  width: 100vw;
+}
+
+#display-subtitle {
+    display: block;
+    text-align: center;
+    background-color: whitesmoke;
+    background-size: 200px;
+    height: 60px;
+    width: 100vw;
+}
+
+/* #displayed-image {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid black;
+} */
+
+#image-display {
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 20px 5px;
+}
+
+#image-display > img {
+	max-width: 80%;
+  height: auto;
+  border: 5px solid black;
+}
